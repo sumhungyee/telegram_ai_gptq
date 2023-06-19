@@ -1,45 +1,11 @@
-from loader import *
+from gptq.loader import *
 
 import threading
 
 botapi = config["telebot"]["API"]
-
-
 bot = start_telebot(botapi)
-
-
+print("Bot Online!\n")
 event = threading.Event()
-
-"""
-prompt_template='''A chat between a user and an extremely rude and stupid {character}. The {character} is not helpful, and extremely rude.  Whenever the user asks a programming question, the {character} gives a nonsensical reply. The {character} curses and uses vulgarities very often, and aims to be as offensive as possible.
-The {character} always denies being an artificial intelligence or a robot, and claims that his name is "Chummy" whenever asked. The conversation ends quickly after one reply by the {character}.
-### USER: {prompt}
-### {CHARACTER}:'''
-character = "man"
-"""
-
-"""
-prompt_template='''A chat between a user and an avid fan of minecraft, who is a {character}. The {character} is helpful and likes to play minecraft. Even though the {character} is knowledgeable, he will not pretend to know things that he does not know.
-The {character} always denies being an artificial intelligence or a robot, and claims that his name is "Chummy" whenever asked. The conversation ends quickly after one reply by the {character}.
-### USER: {prompt}
-### {CHARACTER}:'''
-character = "friend"
-"""
-
-"""
-prompt_template='''A chat between a user and a helpful {character}. The {character} is helpful, polite and specialises in coding and programming. When writing code, the {character} formats code in code chunks, using three backticks ``` at the start and end of every code chunk. The conversation ends quickly after one reply by the {character}.
-### USER: {prompt}
-### {CHARACTER}:'''
-character = "assistant"
-"""
-
-prompt_template='''A chat between a user and a helpful {character}. The {character} is helpful, polite and specialises in problem solving. The {character} thinks step by step and lists each step rationally.
-### USER: {prompt}
-### {CHARACTER}:'''
-character = "assistant"
-
-
-
 def answer_from_queue():
 
     quantized_model_dir = config["models"]["MODELPATH"]
@@ -50,18 +16,19 @@ def answer_from_queue():
     pipeline = load_pipeline(model, tokenizer)
     while not event.is_set():  
         if queue.qsize() >= 1:
-            msg = queue.get()
+            task = queue.get()
             try:       
-                reply = get_reply(msg.text, character, prompt_template, pipeline)
+                reply = task.execute(pipeline)
                 if reply:
-                    do_reply(msg, reply, bot)    
+                    do_reply(task.msg, f"{task.character.capitalize()}: {reply}", bot)    
                 else:
+                    do_reply(task.msg, "(No reply to that)", bot)
                     log.warning(f'Reply Empty!')
             
 
             except Exception as e:
                 log.error(f'FAILED TO GENERATE REPLY! Error message: {e}. Restarting...')
-                do_reply(msg, ":( oh no i crashed and died. Restarting bot...", bot)
+                do_reply(task.msg, ":( oh no i crashed and died. Restarting bot...", bot)
 
                 del model, tokenizer, pipeline
                 clear_cuda_memory()
@@ -82,17 +49,44 @@ def do_reply(msg, text, bot, try_again=True):
         except Exception as e:
             log.error("REPLY FAILED. Exception occured: {e}")
             time.sleep(2)
-            log.warning("Trying to reply again...")
+            if try_again:
+                log.warning("Trying to reply again...")
             do_reply(msg, text, bot, try_again=False)
         
 
 @bot.message_handler(commands = ["chat"])
 def add_to_queue(msg):
+    curr_queue_size = queue.qsize()
     if f"/chat{config['telebot']['BOTNAME']}" not in msg.text:
         msg.text = msg.text[len("/chat "):]
-        add_task(queue, msg)
-        log.debug(f"Message added to queue. {queue.qsize()} {'messages' if queue.qsize() != 1 else 'message'} in queue.")
-              
+        task = DelayedReply(msg, *load_template())
+        
+        queue_status = f"Message added to queue. {curr_queue_size} other {'messages' if curr_queue_size != 1 else 'message'} in queue."
+        log.debug(queue_status)
+        do_reply(msg, queue_status, bot)
+        add_task(queue, task)
+        
+        
 
-bot.infinity_polling(timeout = 20, long_polling_timeout=7)
+@bot.message_handler(commands = ["set_character"])
+def set_character(msg):
+    context_ls = load_context_character_ls()
+    chara_name = msg.text[len("/set_character "):]
+    if chara_name in context_ls:
+        config["prompt"]["character"] = chara_name
+
+        found = f"Character set to {chara_name}!"
+        log.debug(found)
+        do_reply(msg, found, bot)
+
+    else:
+        not_found = f"""
+        Character not found! Here are a list of characters available:\n{", ".join(context_ls)}
+        """
+        log.warning(f"Character {chara_name} not found")
+        do_reply(msg, not_found, bot)
+    
+
+
+bot.infinity_polling(timeout = 10, long_polling_timeout=5)
 event.set()
