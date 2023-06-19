@@ -31,6 +31,10 @@ Note that this bot relies on AutoGPTQ, and has mainly been tested on LLaMA-based
 
 Download these models and add them to the `gptqmodels` folder, and change the settings in `main_settings.ini` to ensure that the link points to the model you want.
 
+### Limitations
+1. No memory :(. This is beneficial for group-chats, and saves a lot of effort and memory.
+2. Can be very slow, depending on how fast your computer is. 
+
 ### **IMPORTANT, FOR DEVELOPERS**
 Different models are trained with different prompt templates. It is important to ensure that your model's prompt template matches the prompt template you are feeding it. For a list of prompt templates, see [this link](https://www.reddit.com/r/LocalLLaMA/wiki/models#wiki_prompt_templates).
 
