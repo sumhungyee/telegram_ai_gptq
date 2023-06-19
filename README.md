@@ -40,6 +40,7 @@ Different models are trained with different prompt templates. It is important to
 
 Currently, only Vicunav1.1 is supported, however, one can choose to extend this by visiting `loader.py` under the `gptq` folder, extending from the `PromptTypes` and `DelayedReply` classes. 
  
-
+### Acknowledgements
+Special thanks to TheBloke for helping to debug and providing template code.
 
 
