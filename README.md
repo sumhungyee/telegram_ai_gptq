@@ -21,7 +21,10 @@ A telegram bot run on a large language model.
 
 ## Making Changes
 ### Adding characters/contexts
-Navigate to the `prompt_contexts` folder. `Assistant` is already provided. The name of the text file `assistant.txt` serves as the character name, while the text within the text file serves as the context for prompts. To be more specific, naming the text file as `cat.txt` is sufficient in changing the character's identity to a cat.
+Navigate to the `prompt_contexts` folder. `Assistant` is already provided, and users may use the text file as an example to create a context. The name of the text file `assistant.txt` serves as the character name, while the text within the text file serves as the context for prompts. To be more specific, naming the text file as `cat.txt` is sufficient in changing the character's identity to a cat.
+
+#### Switching characters
+After adding a text file to the `prompt_contexts` folder, simply go to telegram and use the `/set_character` command. Users may switch back and forth between characters.
 
 ### Changing models (LLMs)
 Note that this bot relies on AutoGPTQ, and has mainly been tested on LLaMA-based models. To source for available models online, one can try **GPTQ models** [finding TheBloke's quantized models on Huggingface](https://huggingface.co/TheBloke).
