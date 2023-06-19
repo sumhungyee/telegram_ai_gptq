@@ -6,13 +6,13 @@ A telegram bot run on a large language model.
 1. A Windows computer.
 2. A Nvidia GPU.
 3. A telegram account.
-4. Python 3.10.16
+4. [Anaconda](https://www.anaconda.com/download)
 5. [CUDA toolkit (A version not later than 11.8)](https://developer.nvidia.com/cuda-toolkit-archive). Currently tested on 11.2.
 
 ## Installation guide
-0. Obtain and follow the instructions of the installer for the [CUDA toolkit (A version not later than 11.8)](https://developer.nvidia.com/cuda-toolkit-archive).
+0. Ensure that the requirements have been installed. Download and execute the installers from the links above and follow the instructions of the installers.
 1. Open the command prompt on your computer. Simply search "terminal" on the bottom left and open up the terminal.
-2. Choose a location on your computer (where you would like to store these files), and note/copy its directory, perhaps using windows explorer. For example, `C:\Users\AI_bot`. or `C:\Users\xyz\OneDrive\Desktop\AI_bot`. Then navigate to this location on the command prompt by typing and entering `cd <directory>`. For example, `cd C:\Users\AI_bot`
+2. Choose a location on your computer (where you would like to store these files), and note/copy its directory, perhaps using windows explorer. For example, `C:\Users\AI_bot` or `C:\Users\xyz\OneDrive\Desktop\AI_bot`. Then navigate to this location on the command prompt by typing and entering `cd <directory>`. For example, `cd C:\Users\AI_bot`.
 3. Go to the terminal, and clone this repository by entering `git clone https://github.com/sumhungyee/telegram_ai.git`
 4. Navigate to the folder you have just created at `<directory>` and click on `Install.bat`. This will take a long time.
 5. In the meantime, go to telegram and search for the user/bot "BotFather". Create a bot and receive your API token, as well as bot handle.
@@ -33,8 +33,8 @@ Download these models and add them to the `gptqmodels` folder, and change the se
 For example, run `git clone https://huggingface.co/TheBloke/wizardLM-13B-1.0-GPTQ` to install wizardLM 13B v1.0 GPTQ.
 
 ### Limitations
-1. No memory :(. This is beneficial for group-chats, and saves a lot of effort and memory.
-2. Can be very slow, depending on how fast your computer is. 
+1. Stateless. This is beneficial for group-chats, and saves a lot of effort and memory.
+2. Can be very slow, depending on the speed of your computer. 
 
 ### **IMPORTANT, FOR DEVELOPERS**
 Different models are trained with different prompt templates. It is important to ensure that your model's prompt template matches the prompt template you are feeding it. For a list of prompt templates, see [this link](https://www.reddit.com/r/LocalLLaMA/wiki/models#wiki_prompt_templates).
