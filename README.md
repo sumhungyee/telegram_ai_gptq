@@ -7,7 +7,7 @@ A telegram bot run on a large language model.
 2. A Nvidia GPU.
 3. A telegram account.
 4. [Anaconda](https://www.anaconda.com/download)
-5. [CUDA toolkit (A version not later than 11.8)](https://developer.nvidia.com/cuda-toolkit-archive). Currently tested on 11.2.
+5. [CUDA toolkit (A version not after 11.8)](https://developer.nvidia.com/cuda-toolkit-archive). Currently tested on 11.2.
 
 ## Installation guide
 0. Ensure that the requirements have been installed. Download and execute the installers from the links above and follow the instructions of the installers.
