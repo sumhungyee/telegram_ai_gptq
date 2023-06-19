@@ -27,9 +27,10 @@ Navigate to the `prompt_contexts` folder. `Assistant` is already provided, and u
 After adding a text file to the `prompt_contexts` folder, simply go to telegram and use the `/set_character` command. Users may switch back and forth between characters.
 
 ### Changing models (LLMs)
-Note that this bot relies on AutoGPTQ, and has mainly been tested on LLaMA-based models. To source for available models online, one can try **GPTQ models** [finding TheBloke's quantized models on Huggingface](https://huggingface.co/TheBloke).
+Note that this bot relies on AutoGPTQ, and has mainly been tested on LLaMA-based models. To source for available models online, users can try smaller-parameter **GPTQ models** [finding TheBloke's quantized models on Huggingface](https://huggingface.co/TheBloke).
 
 Download these models and add them to the `gptqmodels` folder, and change the settings in `main_settings.ini` to ensure that the link points to the model you want.
+For example, run `git clone https://huggingface.co/TheBloke/wizardLM-13B-1.0-GPTQ` to install wizardLM 13B v1.0 GPTQ.
 
 ### Limitations
 1. No memory :(. This is beneficial for group-chats, and saves a lot of effort and memory.
