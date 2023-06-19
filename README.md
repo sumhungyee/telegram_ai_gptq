@@ -27,7 +27,7 @@ Note that this bot relies on AutoGPTQ, and has mainly been tested on LLaMA-based
 
 Download these models and add them to the `gptqmodels` folder, and change the settings in `main_settings.ini` to ensure that the link points to the model you want.
 
-**IMPORTANT, FOR DEVELOPERS**
+### **IMPORTANT, FOR DEVELOPERS**
 Different models are trained with different prompt templates. It is important to ensure that your model's prompt template matches the prompt template you are feeding it. For a list of prompt templates, see [this link](https://www.reddit.com/r/LocalLLaMA/wiki/models#wiki_prompt_templates).
 
 Currently, only Vicunav1.1 is supported, however, one can choose to extend this by visiting `loader.py` under the `gptq` folder, extending from the `PromptTypes` and `DelayedReply` classes. 
