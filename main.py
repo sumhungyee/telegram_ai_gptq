@@ -4,7 +4,7 @@ import threading
 
 botapi = config["telebot"]["API"]
 bot = start_telebot(botapi)
-print("Bot Online!\n")
+
 event = threading.Event()
 def answer_from_queue():
 
@@ -39,7 +39,7 @@ def answer_from_queue():
                 
 answerer=threading.Thread(target=answer_from_queue)
 answerer.start() 
-
+log.debug("\nBot online!\n")
 
 def do_reply(msg, text, bot, try_again=True):
     if try_again:
