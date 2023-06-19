@@ -26,6 +26,8 @@ Navigate to the `prompt_contexts` folder. `Assistant` is already provided, and u
 #### Switching characters
 After adding a text file to the `prompt_contexts` folder, simply go to telegram and use the `/set_character` command. Users may switch back and forth between characters.
 
+
+## For Developers
 ### Changing models (LLMs)
 Note that this bot relies on AutoGPTQ, and has mainly been tested on LLaMA-based models. To source for available models online, users can try smaller-parameter **GPTQ models** [finding TheBloke's quantized models on Huggingface](https://huggingface.co/TheBloke).
 
@@ -36,7 +38,6 @@ For example, run `git clone https://huggingface.co/TheBloke/wizardLM-13B-1.0-GPT
 1. Stateless. This is beneficial for group-chats, and saves a lot of effort and memory.
 2. Can be very slow, depending on the speed of your computer. 
 
-### **IMPORTANT, FOR DEVELOPERS**
 Different models are trained with different prompt templates. It is important to ensure that your model's prompt template matches the prompt template you are feeding it. For a list of prompt templates, see [this link](https://www.reddit.com/r/LocalLLaMA/wiki/models#wiki_prompt_templates).
 
 Currently, only Vicunav1.1 is supported, however, one can choose to extend this by visiting `loader.py` under the `gptq` folder, extending from the `PromptTypes` and `DelayedReply` classes. 
