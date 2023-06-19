@@ -20,7 +20,7 @@ A telegram bot run on a large language model.
 
 ## Making Changes
 ### Adding characters/contexts
-Navigate to the `prompt_contexts` folder. `Assistant` is already provided. The name of the text file `Assistant.txt` serves as the character name, while the text within the text file serves as the context for prompts. To be more specific, naming the text file as "cat.txt" is sufficient to change the character's identity to a cat.
+Navigate to the `prompt_contexts` folder. `Assistant` is already provided. The name of the text file `assistant.txt` serves as the character name, while the text within the text file serves as the context for prompts. To be more specific, naming the text file as "cat.txt" is sufficient to change the character's identity to a cat.
 
 ### Changing models (LLMs)
 Note that this bot relies on AutoGPTQ, and has mainly been tested on LLaMA-based models. To source for available models online, one can try **GPTQ models** [finding TheBloke's quantized models on Huggingface](https://huggingface.co/TheBloke).
