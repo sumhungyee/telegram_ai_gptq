@@ -11,8 +11,6 @@ if not exist %root% (
 )
 
 set pathdir=%cd%
-
-
 mkdir %pathdir%\environment
 call %root%\activate.bat
 if not exist %pathdir%\environment\telebot-env (
