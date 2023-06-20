@@ -11,7 +11,7 @@ A telegram bot run on a large language model.
 
 ## Installation guide
 0. Ensure that the requirements have been installed. Download and execute the installers from the links above and follow the instructions of the installers.
-1. Open the command prompt on your computer. Simply search "terminal" on the bottom left and open up the terminal.
+1. Open the command prompt on your computer. Simply search "terminal" on the bottom left and open up the terminal. If you run into any installation problems of the `safetensors` file, it may be that your git version is older than 2.34. Run `git update-git-for-windows` in the command prompt.
 2. Choose a location on your computer (where you would like to store these files), and note/copy its directory, perhaps using windows explorer. For example, `C:\Users\AI_bot` or `C:\Users\xyz\OneDrive\Desktop\AI_bot`. Then navigate to this location on the command prompt by typing and entering `cd <directory>`. For example, `cd C:\Users\AI_bot`.
 3. Go to the terminal, and clone this repository by entering `git clone https://github.com/sumhungyee/telegram_ai.git`
 4. Navigate to the folder you have just created at `<directory>` and click on `Install.bat`. This will take a long time.
