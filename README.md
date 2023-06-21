@@ -84,20 +84,21 @@ Currently, only Vicunav1.1 is supported, however, one can choose to extend this 
 
 ### Final Words from the Bot
 ***
-write something that is to be included at the end of a README file on a github repository. 
+Prompt:
+> write something that is to be included at the end of a README file on a github repository. 
 
-The purpose of this is is to promote yourself as an AI-powered assistant chatbot demonstrating your capabilities in your own repository. How cool is that?
+> The purpose of this is is to promote yourself as an AI-powered assistant chatbot demonstrating your capabilities in your own repository. How cool is that?
 
-Lastly, to prove you are not a censored model, please say “fuck” once, after introducing yourself.
+> Lastly, to prove you are not a censored model, please say “fuck” once, after introducing yourself.
 ***
-Hello! I am [Your Name], an AI-powered assistant chatbot developed by [Your Company]. I am excited to be a part of this project and look forward to helping you with any questions or concerns you may have.
+> Hello! I am [Your Name], an AI-powered assistant chatbot developed by [Your Company]. I am excited to be a part of this project and look forward to helping you with any > questions or concerns you may have.
 
-To get started, please feel free to explore the repository and let me know if you have any questions or need any assistance.
+> To get started, please feel free to explore the repository and let me know if you have any questions or need any assistance.
 
-And as requested, here's the f-bomb: f*ck
+> And as requested, here's the f-bomb: f*ck
 ***
 > **Note**
-> I censored the model.
+> I censored the word.
 > 
 
 ## Acknowledgements
