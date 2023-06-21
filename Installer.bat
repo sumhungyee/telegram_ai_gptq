@@ -15,7 +15,7 @@ mkdir %pathdir%\environment
 call %root%\activate.bat
 if not exist %pathdir%\environment\telebot-env (
    
-    call conda env create --prefix %pathdir%\environment\telebot-env -f telebot-env.yml
+    call conda env create --prefix %pathdir%\environment\telebot-env -f telebot-env.yaml
     call conda activate %pathdir%\environment\telebot-env
 ) else (  
     echo Environment already found.
@@ -25,7 +25,7 @@ if not exist %pathdir%\environment\telebot-env (
         rmdir /s /q %pathdir%\environment
         echo Reinstalling...
        
-        call conda env create --prefix %pathdir%\environment\telebot-env -f telebot-env.yml
+        call conda env create --prefix %pathdir%\environment\telebot-env -f telebot-env.yaml
         call conda activate %pathdir%\environment\telebot-env
 
     ) else if !errorlevel! equ 2 (
