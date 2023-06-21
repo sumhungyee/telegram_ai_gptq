@@ -1,8 +1,6 @@
 # telegram_aid
 A telegram bot run on a large language model. This can run locally on your computer, without the use of any API. This is a very new project and I'm happy to get some feedback.
-> **Note**
-> To run a large language model, users will need a Nvidia GPU.
-> 
+
 
 > **Warning**
 > The provided model (Wizard-Vicuna-13B) is **UNCENSORED**. Users are warned that they are responsible for their prompts and all generated texts produced by the bot. 
@@ -67,6 +65,7 @@ After adding a text file to the `prompt_contexts` folder, simply go to telegram 
 
 ## For Developers
 ### Changing models (LLMs)
+
 Note that this bot relies on AutoGPTQ, and has mainly been tested on LLaMA-based models. To source for available models online, users can try smaller-parameter **GPTQ models** [finding TheBloke's quantized models on Huggingface](https://huggingface.co/TheBloke).
 
 Download these models and add them to the `gptqmodels` folder, and change the settings in `main_settings.ini` to ensure that the link points to the model you want.
@@ -74,7 +73,11 @@ For example, run `git clone https://huggingface.co/TheBloke/wizardLM-13B-1.0-GPT
 
 ### Limitations
 1. Stateless. This is beneficial for group-chats, and saves a lot of effort and memory.
-2. Can be very slow, depending on the speed of your computer. 
+2. Can be very slow, depending on the speed of your computer.
+   
+> **Note**
+> It is advised to download GPTQ models less than or equal to 13B parameters
+> 
 
 Different models are trained with different prompt templates. It is important to ensure that your model's prompt template matches the prompt template you are feeding it. For a list of prompt templates, see [this link](https://www.reddit.com/r/LocalLLaMA/wiki/models#wiki_prompt_templates).
 Currently, only Vicunav1.1 is supported, however, one can choose to extend this by visiting `loader.py` under the `gptq` folder, extending from the `PromptTypes` and `DelayedReply` classes. 
