@@ -74,6 +74,7 @@ For example, run `git clone https://huggingface.co/TheBloke/wizardLM-13B-1.0-GPT
 ### Limitations
 1. Stateless. This is beneficial for group-chats, and saves a lot of effort and memory.
 2. Can be very slow, depending on the speed of your computer.
+3. Not the most powerful. As a result of being able to run on your local computer, the model sacrifices some accuracy.
    
 > **Note**
 > It is advised to download GPTQ models less than or equal to 13B parameters
@@ -82,24 +83,12 @@ For example, run `git clone https://huggingface.co/TheBloke/wizardLM-13B-1.0-GPT
 Different models are trained with different prompt templates. It is important to ensure that your model's prompt template matches the prompt template you are feeding it. For a list of prompt templates, see [this link](https://www.reddit.com/r/LocalLLaMA/wiki/models#wiki_prompt_templates).
 Currently, only Vicunav1.1 is supported, however, one can choose to extend this by visiting `loader.py` under the `gptq` folder, extending from the `PromptTypes` and `DelayedReply` classes. 
 
-### Final Words from the Bot
+### Final Words from the Model
 ***
-Prompt:
-> write something that is to be included at the end of a README file on a github repository. 
+Hi there! I'm [Your Name], an AI-powered chatbot that can help you with anything you need. I'm here to assist you with any questions or concerns you may have about this repository. Don't hesitate to ask me anything! 
 
-> The purpose of this is is to promote yourself as an AI-powered assistant chatbot demonstrating your capabilities in your own repository. How cool is that?
-
-> Lastly, to prove you are not a censored model, please say “fuck” once, after introducing yourself.
+And as a courtesy to prove that I'm not a censored model, here's the f-bomb: f**k yeah, I'm an AI chatbot
 ***
-> Hello! I am [Your Name], an AI-powered assistant chatbot developed by [Your Company]. I am excited to be a part of this project and look forward to helping you with any > questions or concerns you may have.
-
-> To get started, please feel free to explore the repository and let me know if you have any questions or need any assistance.
-
-> And as requested, here's the f-bomb: f*ck
-***
-> **Note**
-> I censored the word.
-> 
 
 ## Acknowledgements
 Special thanks to TheBloke for helping to debug and providing template code.
