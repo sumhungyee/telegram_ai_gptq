@@ -1,6 +1,12 @@
-# telegram_ai
-A telegram bot run on a large language model. This is a very new project and I'm happy to get some feedback.
+# telegram_aid
+A telegram bot run on a large language model. This can run locally on your computer, without the use of any API. This is a very new project and I'm happy to get some feedback.
+> **Note**
+> To run a large language model, users will need a Nvidia GPU.
+> 
 
+> **Warning**
+> The provided model (Wizard-Vicuna-13B) is **UNCENSORED**. Users are warned that they are responsible for their prompts and all generated texts produced by the bot. 
+>
 ### Sample Image 1
 ![image](https://github.com/sumhungyee/telegram_ai/assets/113227987/fb7f9124-27db-48ba-8a09-f25ac794236e)
 
