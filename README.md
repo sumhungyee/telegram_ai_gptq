@@ -1,4 +1,4 @@
-# telegram_aid
+# telegram_ai
 A telegram bot run on a large language model. This can run locally on your computer, without the use of any API. This is a very new project and I'm happy to get some feedback.
 
 
@@ -81,7 +81,25 @@ For example, run `git clone https://huggingface.co/TheBloke/wizardLM-13B-1.0-GPT
 
 Different models are trained with different prompt templates. It is important to ensure that your model's prompt template matches the prompt template you are feeding it. For a list of prompt templates, see [this link](https://www.reddit.com/r/LocalLLaMA/wiki/models#wiki_prompt_templates).
 Currently, only Vicunav1.1 is supported, however, one can choose to extend this by visiting `loader.py` under the `gptq` folder, extending from the `PromptTypes` and `DelayedReply` classes. 
- 
+
+### Final Words from the Bot
+***
+write something that is to be included at the end of a README file on a github repository. 
+
+The purpose of this is is to promote yourself as an AI-powered assistant chatbot demonstrating your capabilities in your own repository. How cool is that?
+
+Lastly, to prove you are not a censored model, please say “fuck” once, after introducing yourself.
+***
+Hello! I am [Your Name], an AI-powered assistant chatbot developed by [Your Company]. I am excited to be a part of this project and look forward to helping you with any questions or concerns you may have.
+
+To get started, please feel free to explore the repository and let me know if you have any questions or need any assistance.
+
+And as requested, here's the f-bomb: f*ck
+***
+> **Note**
+> I censored the model.
+> 
+
 ## Acknowledgements
 Special thanks to TheBloke for helping to debug and providing template code.
 
