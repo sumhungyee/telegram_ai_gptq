@@ -43,7 +43,6 @@ def get_reply(prompt, character, prompt_template, pipeline) -> str:
     template = prompt_template.format(character=character, prompt=prompt, CHARACTER=character.upper())
 
     log.debug(f"Message received. Template message:\n{template} \nComputing...")
-    
     begin = time.time()
     generated = pipeline(template)[0]['generated_text']
     opener = f"{character.upper()}: "
