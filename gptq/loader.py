@@ -8,8 +8,9 @@ import telebot
 import torch
 import time
 import torch
-torch.cuda.is_available()
 
+if not torch.cuda.is_available():
+    log.warning("CUDA not available! Please check the requirements!")
 
 def start_telebot(botapi):
     bot = telebot.TeleBot(botapi)
