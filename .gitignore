@@ -1,6 +1,6 @@
-__pycache__/
-gptqmodels/
-*.txt
-*.safetensors
-environment/
-logs.log
+**/__pycache__/
+**/gptqmodels/
+**/*.txt
+**/*.safetensors
+**/environment/
+**/logs.log
