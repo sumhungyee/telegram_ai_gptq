@@ -1,9 +1,10 @@
 # telegram_ai
-A telegram bot run on a large language model. This can run locally on your computer, without the use of any API. This is a very new project and I'm happy to get some feedback.
+A telegram bot run on a large language model. This can run locally on your computer, without the use of any API. 
 
 
 > **Warning**
-> The provided model (Wizard-Vicuna-13B) is **UNCENSORED**. Users are warned that they are responsible for their prompts and all generated texts produced by the bot. 
+> - This specific version relies on a GPTQ (quantized) model, and will require a LARGE amount of VRAM (>=16GB) 
+> - The provided model (Wizard-Vicuna-13B) is **UNCENSORED**. Users are warned that they are responsible for their prompts and all generated texts produced by the bot. 
 >
 ### Sample Image 1
 ![image](https://github.com/sumhungyee/telegram_ai/assets/113227987/fb7f9124-27db-48ba-8a09-f25ac794236e)
@@ -73,7 +74,7 @@ For example, run `git clone https://huggingface.co/TheBloke/wizardLM-13B-1.0-GPT
 
 ### Limitations
 1. Stateless. This is beneficial for group-chats, and saves a lot of effort and memory.
-2. Can be very slow, depending on the speed of your computer.
+2. Can be very slow, depending on the size of your GPU.
 3. Not the most powerful. As a result of being able to run on your local computer, the model sacrifices some accuracy.
    
 > **Note**
@@ -87,7 +88,6 @@ Currently, only Vicunav1.1 is supported, however, one can choose to extend this 
 ***
 Hi there! I'm [Your Name], an AI-powered chatbot that can help you with anything you need. I'm here to assist you with any questions or concerns you may have about this repository. Don't hesitate to ask me anything! 
 
-And as a courtesy to prove that I'm not a censored model, here's the f-bomb: f**k yeah, I'm an AI chatbot
 ***
 
 ## Acknowledgements
