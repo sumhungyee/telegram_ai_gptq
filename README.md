@@ -3,8 +3,8 @@ A telegram bot run on a large language model. This can run locally on your compu
 
 
 > **Warning**
-> This specific version relies on a GPTQ (quantized) model, and will require a LARGE amount of VRAM (>=16GB) 
-> The provided model (Wizard-Vicuna-13B) is **UNCENSORED**. Users are warned that they are responsible for their prompts and all generated texts produced by the bot. 
+> - This specific version relies on a GPTQ (quantized) model, and will require a LARGE amount of VRAM (>=16GB) 
+> - The provided model (Wizard-Vicuna-13B) is **UNCENSORED**. Users are warned that they are responsible for their prompts and all generated texts produced by the bot. 
 >
 ### Sample Image 1
 ![image](https://github.com/sumhungyee/telegram_ai/assets/113227987/fb7f9124-27db-48ba-8a09-f25ac794236e)
