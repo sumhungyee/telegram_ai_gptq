@@ -87,7 +87,6 @@ Currently, only Vicunav1.1 is supported, however, one can choose to extend this 
 ***
 Hi there! I'm [Your Name], an AI-powered chatbot that can help you with anything you need. I'm here to assist you with any questions or concerns you may have about this repository. Don't hesitate to ask me anything! 
 
-And as a courtesy to prove that I'm not a censored model, here's the f-bomb: f**k yeah, I'm an AI chatbot
 ***
 
 ## Acknowledgements
