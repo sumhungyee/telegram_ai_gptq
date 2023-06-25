@@ -74,7 +74,7 @@ For example, run `git clone https://huggingface.co/TheBloke/wizardLM-13B-1.0-GPT
 
 ### Limitations
 1. Stateless. This is beneficial for group-chats, and saves a lot of effort and memory.
-2. Can be very slow, depending on the speed of your computer.
+2. Can be very slow, depending on the size of your GPU.
 3. Not the most powerful. As a result of being able to run on your local computer, the model sacrifices some accuracy.
    
 > **Note**
