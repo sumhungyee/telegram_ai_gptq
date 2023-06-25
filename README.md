@@ -1,5 +1,5 @@
 # telegram_ai
-A telegram bot run on a large language model. This can run locally on your computer, without the use of any API. This is a very new project and I'm happy to get some feedback.
+A telegram bot run on a large language model. This can run locally on your computer, without the use of any API. 
 
 
 > **Warning**
