@@ -1,10 +1,9 @@
 # telegram_ai
 A telegram bot run on a large language model. This can run locally on your computer, without the use of any API. 
 
-
 > **Warning**
-> - This specific version relies on a GPTQ (quantized) model, and will require a LARGE amount of VRAM (>=16GB) 
-> - The provided model (Wizard-Vicuna-13B) is **UNCENSORED**. Users are warned that they are responsible for their prompts and all generated texts produced by the bot. 
+> - This programme relies on a GPTQ (quantized) model, and will require a larger amount of VRAM (>=16GB) 
+> - The provided model (Wizard-Vicuna-13B) is **UNCENSORED**. Users are warned that they are responsible for their prompts and all generated texts produced by the bot. A censored version exists [here](https://huggingface.co/TheBloke/wizard-vicuna-13B-GPTQ).
 >
 ### Sample Image 1
 ![image](https://github.com/sumhungyee/telegram_ai/assets/113227987/fb7f9124-27db-48ba-8a09-f25ac794236e)
@@ -30,14 +29,14 @@ git update-git-for-windows
 ```
 
 #### Step 2
-Choose a location on your computer (where you would like to store these files), and note/copy its directory, perhaps using windows explorer. For example, `C:\Users\AI_bot` or `C:\Users\xyz\OneDrive\Desktop\AI_bot`. Then navigate to this location on the command prompt by typing and entering
+Choose a location on your computer (where you would like to store these files), and note/copy its directory, perhaps using windows explorer. For example, `C:\Users\AI_bot` or `C:\Users\xyz\OneDrive\Desktop\AI_bot`. Then navigate to this location on the command prompt by typing and entering:
 ```
 cd <directory>
 ```
 For example, `cd C:\Users\AI_bot`.
 
 #### Step 3
-Go to the terminal, and clone this repository by entering
+Go to the terminal, and clone this repository by entering:
 ```
 git clone https://github.com/sumhungyee/telegram_ai.git
 ```
@@ -52,10 +51,17 @@ In the meantime, go to telegram and search for the user/bot "BotFather". Create 
   3. After creating the telegram bot, BotFather will provide an API token. Note down the token provided by BotFather.
 
 #### Step 6
-Adjust and fill in the parameters in `main_settings.ini`! Fill in your API token for telegram and your bot's handle. Decrease or increase the value under your GPU's VRAM (and make sure to give around 3-4GB of buffer). 
+Adjust and fill in the parameters in `main_settings.ini`! Fill in your API token for telegram and your bot's handle. Decrease or increase the value under your GPU's VRAM (and make sure to give around 3-4GB of buffer). For example, a Nvidia RTX 3060 GPU has 16GB of VRAM. Adjust the `max memory` parameter under `firstgpu` to about 12GB.
+
+![image](https://github.com/sumhungyee/telegram_ai/assets/113227987/a9fc37a6-16b3-4589-9b08-66d29ea9f991)
+
+> **Note**
+> If your GPU has less than 16GB of VRAM, the computing time to produce a reply will be noticeably longer. However, GPTQ quantization,
+> when run on a large-enough GPU, is in general, quite fast.
+> 
 
 #### Step 7
-Click on  `RUNME.bat` to run the bot!
+Click on  `RUNME.bat` to run the bot! Wait for the program to load.
 
 ## Making Changes
 ### Adding characters/contexts
