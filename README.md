@@ -51,7 +51,7 @@ In the meantime, go to telegram and search for the user/bot "BotFather". Create 
   3. After creating the telegram bot, BotFather will provide an API token. Note down the token provided by BotFather.
 
 #### Step 6
-Adjust and fill in the parameters in `main_settings.ini`! Fill in your API token for telegram and your bot's handle. Decrease or increase the value under your GPU's VRAM (and make sure to give around 3-4GB of buffer). For example, a Nvidia RTX 3060 GPU has 16GB of VRAM. Adjust the `max memory` parameter under `firstgpu` to about 12GB.
+Adjust and fill in the parameters in `main_settings.ini`! Fill in your API token for telegram and your bot's handle. Decrease or increase the value under your GPU's VRAM (and make sure to give around 3-4GB of buffer). For example, a Nvidia RTX 3060 GPU has 16GB of VRAM. Adjust the `max memory` parameter under `firstgpu` (currently 4GB in the image below) to about 12GB.
 
 ![image](https://github.com/sumhungyee/telegram_ai/assets/113227987/a9fc37a6-16b3-4589-9b08-66d29ea9f991)
 
