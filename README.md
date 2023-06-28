@@ -1,4 +1,4 @@
-# telegram_ai
+# telegram_ai_gptq
 A telegram bot run on a large language model. This can run locally on your computer, without the use of any API. 
 
 > **Warning**
